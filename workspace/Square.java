@@ -1,5 +1,7 @@
-
-
+/*Author: Roi Porat-Shliom (with starter code from Mr. Menchukov)
+ *Final Version Date: 3/5/2025
+ *Purpose: Create a visually accurate chess board with the functionality of one special piece working
+ */
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
