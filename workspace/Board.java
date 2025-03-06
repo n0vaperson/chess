@@ -217,16 +217,16 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
     public void mouseDragged(MouseEvent e) {
         currX = e.getX() - 24;
         currY = e.getY() - 24;
-        /*if(currPiece!= null) {
+        if(currPiece!= null) {
         	for(Square s: currPiece.getLegalMoves(this, fromMoveSquare)) {
         		s.setBorder(BorderFactory.createLineBorder(Color.MAGENTA));
         	}
-        }*/
-        if(currPiece!= null) {
+        }
+        /*if(currPiece!= null) {
         	for(Square s: currPiece.getControlledSquares(board, fromMoveSquare)) {
         		s.setBorder(BorderFactory.createLineBorder(Color.RED));
         	}
-        }
+        }*/
 
         repaint();
     }

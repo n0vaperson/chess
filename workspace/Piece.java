@@ -95,25 +95,25 @@ public class Piece {
         //start by declaring the arrayList we wish to return at the end
         ArrayList<Square> moves = new ArrayList<Square>();
                  if(start.getCol()+2<8){
-                  if (((b.getSquareArray()[start.getRow()][start.getCol()+2]).isOccupied() == false) || (b.getSquareArray()[start.getRow()][start.getCol()+2]).getOccupyingPiece().getColor()==!start.getColor() || b.getSquareArray()[start.getRow()][start.getCol()+2].getColor()!=start.getColor()){                  
+                  if ((b.getSquareArray()[start.getRow()][start.getCol()+2]).isOccupied() == false || (b.getSquareArray()[start.getRow()][start.getCol()+2]).getOccupyingPiece().getColor()==!color){                  
                     moves.add(b.getSquareArray()[start.getRow()][start.getCol()+2]);
                    }
                   }
 
                   if(start.getCol()-2>=0){
-                    if (((b.getSquareArray()[start.getRow()][start.getCol()-2]).isOccupied() == false) || (b.getSquareArray()[start.getRow()][start.getCol()-2]).getOccupyingPiece().getColor()==!start.getColor() || b.getSquareArray()[start.getRow()][start.getCol()-2].getColor()!=start.getColor()){                  
+                    if (b.getSquareArray()[start.getRow()][start.getCol()-2].isOccupied() == false || b.getSquareArray()[start.getRow()][start.getCol()-2].getOccupyingPiece().getColor()==!color){                  
                       moves.add(b.getSquareArray()[start.getRow()][start.getCol()-2]);
                      }
                   }
 
                   if(start.getRow()+2<8){
-                    if (((b.getSquareArray()[start.getRow()+2][start.getCol()]).isOccupied() == false) || (b.getSquareArray()[start.getRow()+2][start.getCol()]).getOccupyingPiece().getColor()==!start.getColor() || b.getSquareArray()[start.getRow()+2][start.getCol()].getColor()!=start.getColor()){                  
+                    if ((b.getSquareArray()[start.getRow()+2][start.getCol()]).isOccupied() == false || (b.getSquareArray()[start.getRow()+2][start.getCol()]).getOccupyingPiece().getColor()==!color){                  
                       moves.add(b.getSquareArray()[start.getRow()+2][start.getCol()]);
                      }
                   }
 
                   if(start.getRow()-2>=0){
-                    if (((b.getSquareArray()[start.getRow()-2][start.getCol()]).isOccupied() == false) || (b.getSquareArray()[start.getRow()-2][start.getCol()]).getOccupyingPiece().getColor()==!start.getColor() || b.getSquareArray()[start.getRow()-2][start.getCol()].getColor()!=start.getColor()){                  
+                    if (b.getSquareArray()[start.getRow()-2][start.getCol()].isOccupied() == false || b.getSquareArray()[start.getRow()-2][start.getCol()].getOccupyingPiece().getColor()==!color){                  
                       moves.add(b.getSquareArray()[start.getRow()-2][start.getCol()]);
                      }
                   }
