@@ -34,28 +34,20 @@ public class Jester extends Piece{
      */
     public ArrayList<Square> getControlledSquares(Square[][] board, Square start) {
       ArrayList<Square> ctrlSqrs = new ArrayList<Square>();
-      if(start.getCol()+2<8){
-        if (((board[start.getRow()][start.getCol()+2]).isOccupied() == false) || (board[start.getRow()][start.getCol()+2]).getOccupyingPiece().getColor()==!start.getColor()){                  
-          ctrlSqrs.add(board[start.getRow()][start.getCol()+2]);
-         }
+      if(start.getCol()+2<8){                      
+          ctrlSqrs.add(board[start.getRow()][start.getCol()+2]);       
         }
 
-        if(start.getCol()-2>=0){
-          if (((board[start.getRow()][start.getCol()-2]).isOccupied() == false) || (board[start.getRow()][start.getCol()-2]).getOccupyingPiece().getColor()==!start.getColor()){                  
-            ctrlSqrs.add(board[start.getRow()][start.getCol()-2]);
-           }
+        if(start.getCol()-2>=0){                           
+            ctrlSqrs.add(board[start.getRow()][start.getCol()-2]);          
         }
 
-        if(start.getRow()+2<8){
-          if (((board[start.getRow()+2][start.getCol()]).isOccupied() == false) || (board[start.getRow()+2][start.getCol()]).getOccupyingPiece().getColor()==!start.getColor()){                  
-            ctrlSqrs.add(board[start.getRow()+2][start.getCol()]);
-           }
+        if(start.getRow()+2<8){                           
+            ctrlSqrs.add(board[start.getRow()+2][start.getCol()]);           
         }
 
-        if(start.getRow()-2>=0){
-          if (((board[start.getRow()-2][start.getCol()]).isOccupied() == false) || (board[start.getRow()-2][start.getCol()]).getOccupyingPiece().getColor()==!start.getColor()){                  
-            ctrlSqrs.add(board[start.getRow()-2][start.getCol()]);
-           }
+        if(start.getRow()-2>=0){                           
+            ctrlSqrs.add(board[start.getRow()-2][start.getCol()]);  
         }
      return ctrlSqrs;
     }
