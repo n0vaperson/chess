@@ -147,10 +147,10 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
         ArrayList<Square> oppPieces = new ArrayList<>();
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board.length; j++) {
-                if (board[i][j].getOccupyingPiece() != null && board[i][j].getColor() != kingColor) {
+                if (board[i][j].getOccupyingPiece() != null && board[i][j].getOccupyingPiece().getColor() != kingColor) {
                     oppPieces.add(board[i][j]);
                 }
-                if ((board[i][j].getOccupyingPiece() instanceof King) && board[i][j].getColor() == kingColor) {
+                if ((board[i][j].getOccupyingPiece() instanceof King) && board[i][j].getOccupyingPiece().getColor() == kingColor) {
                     kingSquare = board[i][j];
                 }
             }
@@ -220,19 +220,16 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
             for (Square s : currPiece.getLegalMoves(this, fromMoveSquare)) {
                 if (endSquare == s) {
                     Piece capturedPiece = null;
-                    if (endSquare.isOccupied()) {
-                        capturedPiece = endSquare.getOccupyingPiece();
-                    }
+                  
 
                     endSquare.put(currPiece);
                     fromMoveSquare.removePiece();
 
                     if (isInCheck(whiteTurn)) {
+                        System.out.println("i'm in check");
                         fromMoveSquare.put(currPiece);
                         endSquare.put(endPiece);
-                        if (capturedPiece != null) {
-                            endSquare.put(capturedPiece);
-                        }
+                       
                     } else {
                         whiteTurn = !whiteTurn;
                     }
